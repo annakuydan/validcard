@@ -42,6 +42,11 @@ function setupCardValidation() {
   validateButton.addEventListener('click', () => {
     const cardNumber = document.querySelector('.input-group input').value.trim(); // Получаем номер карты и убираем лишние пробелы
 
+    /* // Если строка пустая, выводим сообщение и не продолжаем проверку
+    if (cardNumber === '') {
+      console.log('Введите номер карты');
+      return;
+    } */
 
     const system = getCardSystem(cardNumber); // Определяем платёжную систему
     const cardIcons = document.querySelectorAll('.card-icons-img'); // Получаем все изображения карт
